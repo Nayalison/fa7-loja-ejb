@@ -2,8 +2,6 @@ package br.edu.fa7.loja.model;
 
 import java.io.Serializable;
 
-import javax.persistence.ManyToOne;
-
 public class Endereco implements Serializable{
 
 	private static final long serialVersionUID = -4335416492270530527L;
@@ -15,9 +13,6 @@ public class Endereco implements Serializable{
 	private String complemento;
 	
 	private String cep;
-	
-	@ManyToOne
-	private Cliente cliente;
 
 	public Long getId() {
 		return id;
@@ -49,14 +44,6 @@ public class Endereco implements Serializable{
 
 	public void setCep(String cep) {
 		this.cep = cep;
-	}
-
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
 	}
 	
 }
